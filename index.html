@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<!-- 
+    Project 04
+    Main Page.
+
+    Author: Ryan Wahl
+    Date: 1.16.19
+    File Name: index.html
+ -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Millennium Computers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mc_styles.css" />
+    <link rel="stylesheet" href="mc_forms.css" />
+    <script src="mc_script.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="mc_logo.png" alt="Millennium Computers" />
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Information</a></li>
+                <li><a href="index.html" class="active">Purchase</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <!-- The form -->
+        <form action="http://www.mill_computers.com/orders/process.cgi" method="POST">
+            <fieldset id="userInformation">
+                <legend>User Information (Required)</legend>
+
+                <div class="formRow">
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fName" id="fname" required />
+                </div>
+
+                <div class="formRow">
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lName" id="lname" required />
+                </div>
+
+                <div class="formRow">
+                    <label for="streetId">Street</label>
+                    <input type="text" name="street" id="streetId" required />
+                </div>
+
+                <div class="formRow">
+                    <label for="cityId">City</label>
+                    <input type="text" name="city" id="cityId" required />
+
+                    <label for="stateId">State</label>
+                    <select name="state" id="stateId" required>
+                        <option value="AL">AL</option>
+                        <option value="AK">AK</option>
+                        <option value="AZ">AZ</option>
+                        <option value="AR">AR</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DE">DE</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="HI">HI</option>
+                        <option value="ID">ID</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="IA">IA</option>
+                        <option value="KS">KS</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="ME">ME</option>
+                        <option value="MD">MD</option>
+                        <option value="MA">MA</option>
+                        <option value="MI">MI</option>
+                        <option value="MN">MN</option>
+                        <option value="MS">MS</option>
+                        <option value="MO">MO</option>
+                        <option value="MT">MT</option>
+                        <option value="NE">NE</option>
+                        <option value="NV">NV</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>
+                        <option value="NY">NY</option>
+                        <option value="NC">NC</option>
+                        <option value="ND">ND</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PA">PA</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VT">VT</option>
+                        <option value="VA">VA</option>
+                        <option value="WA">WA</option>
+                        <option value="WV">WV</option>
+                        <option value="WI">WI</option>
+                        <option value="WY">WY</option>
+                    </select>
+                    <div id="zipDiv">
+                        <label for="zipId">ZIP</label>
+                        <input type="text" name="zip" id="zipId" pattern="^\d{5}(-\d{4})?$" placeholder="nnnnn (-nnnn)"
+                            required />
+                    </div>
+                </div>
+
+                <div class="formRow">
+                    <label for="phoneId">Phone</label>
+                    <input type="tel" name="phone" id="phoneId" placeholder="(nnn) nnn-nnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$|^\d{3}[\s-]?\d{3}[\s-]?\d{4}$"
+                        required>
+                </div>
+            </fieldset>
+            <fieldset id="order">
+                <legend>Order</legend>
+
+                <div class="formRow">
+                    <label for="pSpeedId">Processor Speed</label>
+                    <select name="pSpeed" id="pSpeedId">
+                        <option value="3.2">3.2 GHz</option>
+                        <option value="4.0">4.0 GHz</option>
+                        <option value="5.2">5.2 GHz</option>
+                    </select>
+                </div>
+
+                <div class="formRow">
+                    <label for="memId">Memory</label>
+                    <select name="mem" id="memId">
+                        <option value="1">1 GB</option>
+                        <option value="2">2 GB</option>
+                        <option value="4">4 GB</option>
+                        <option value="8">8 GB</option>
+                    </select>
+                </div>
+
+                <div class="formRow">
+                    <label for="monitorId">Monitor Size</label>
+                    <select name="monitor" id="monitorId">
+                        <option value="15">15"</option>
+                        <option value="17">17"</option>
+                        <option value="19">19"</option>
+                        <option value="21">21"</option>
+                    </select>
+                </div>
+
+                <div class="formRow">
+                    <label for="hdId">Hard Drive Size</label>
+                    <select name="hd" id="hdId">
+                        <option value="240">240 GB</option>
+                        <option value="500">500 GB</option>
+                        <option value="750">750 GB</option>
+                        <option value="1T">1 TB</option>
+                    </select>
+                </div>
+
+                <div class="formRow">
+                    <input type="checkbox" name="dvd" id="dvdId">
+                    <label for="dvdId">DVD Burner</label>
+
+                    <input type="checkbox" name="tuner" id="tunerId">
+                    <label for="tunerId">Tuner Card</label>
+
+                    <input type="checkbox" name="mcard" id="mcardId">
+                    <label for="mcardId">Media Card</label>
+                </div>
+
+                <div class="formRow">
+                    <input type="checkbox" id="warrantyId" name="warranty" checked>
+                    <label for="warrantyId">Would you like 24-month extended warranty?</label>
+                </div>
+
+                <div class="formRow">
+                    <label for="commentsId">Additonal Comments</label>
+                </div>
+                <textarea name="comments" id="commentsId" cols="30" rows="10"></textarea>
+            </fieldset>
+            <button type="submit">Send Order</button>
+            <button type="reset">Cancel Order</button>
+            <button>Contact Me</button>
+        </form>
+    </section>
+    <footer>
+        <p>Millennium Computers</p>
+        <p>12928 W. Williams St. <br> Peoria, Arizona, 85383</p>
+    </footer>
+
+</body>
+
+</html>

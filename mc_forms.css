@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* 
+    Project 09 04
+
+    Author: Ryan Wahl
+    Date: 1.16.19
+    File Name: mc_forms.css
+
+*/
+
+/* General Form Styles */
+div.formRow {
+    display: block;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+div#zipDiv {
+    display: inline;
+}
+
+textarea {
+    width: 400px;
+}
+
+fieldset {
+    border: none;
+    margin-top: 20px;
+}
+
+button {
+    margin-left: 10px;
+}
+
+legend {
+    font-size: 1.5em;
+    background-color: rgb(0, 162, 255);
+    width: 100%;
+    border-radius: 10px;
+    margin-left: -10px;
+}
+
+input#streetId {
+    width: 350px;
+}
+
+@media only screen and (max-width: 481px) {
+    div#zipDiv {
+        display: block;
+        margin-top: 10px;
+    }
+
+    input#streetId {
+        width: 150px;
+    }
+
+    textarea {
+        width: 300px;
+    }
+}
+
+/* Validation Styles */
+input:valid:focus {
+    background: rgb(168, 247, 168) url("mc_go.png") right no-repeat;
+}
+
+input:invalid:focus {
+    background-color: rgb(253, 188, 188);
+    background-image: url("mc_stop.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+input#phoneId:invalid,
+input#zipId:invalid {
+    background-image: url("mc_stop.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}

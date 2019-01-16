@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+/* 
+    Project 09 04
+
+    Author: Ryan Wahl
+    Date: 1.16.19
+    File Name: mc_styles.css
+
+*/
+
+/* Body Styles */
+html {
+    background-color: rgb(79, 79, 248);
+}
+
+body {
+    background-color: white;
+    width: 85%;
+    margin: auto;
+    padding: 0;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: darkgray;
+    color: white;
+}
+
+/* Header Styles */
+header>img {
+    width: 100%;
+}
+
+
+/* Media Styles for the navigation bar */
+header>nav a {
+    background-color: rgb(64, 144, 248);
+    color: white;
+}
+
+header>nav a:visited.active,
+header>nav a:link.active {
+    /* Sets the background color to gray and the text color to white */
+    background-color: rgb(59, 152, 228);
+    color: white;
+}
+
+header>nav a:hover,
+header>nav a:link {
+    /* Sets the background color to gray and the text color to white */
+    background-color: rgb(30, 175, 233);
+    color: white;
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* Sets the navigation width to 100% so it spans across the entire top. */
+    header>nav {
+        width: 100%;
+    }
+
+    header>nav a {
+        /* Removes all of the underlines. */
+        text-decoration: none;
+    }
+
+    header nav ul {
+        /* Sets the display of flex to unordered list */
+        display: -webkit-flex;
+        display: flex;
+        /* Sets the flow to column with no wrapping. */
+        -webkit-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        /* Removes the bullet points */
+        list-style-type: none;
+        /* Makes the ul span across the screen */
+        width: 100%;
+        /* Zero out paddings and margins. */
+        padding: 0;
+        margin: 0;
+    }
+
+    header nav li,
+    header nav a {
+        /* Centers the text */
+        text-align: center;
+        /* Sets the width to 100% */
+        width: 100%;
+        /* Makes the link go from an inline to block. */
+        display: block;
+    }
+
+    header nav a {
+        /* Adds a padding of 5 around the links. */
+        padding: 5px;
+    }
+
+}
+
+@media only screen and (min-width: 481px) {
+
+    /* Navigation Styles */
+    header>nav {
+        /* Sets the display of the nav to table. */
+        display: table;
+        /* Makes the nav bar span across the entire screen. */
+        width: 100%;
+    }
+
+    header>nav a {
+        /* Adds a padding of 10 pixels around the link */
+        padding: 10px;
+        /* Removes the underline */
+        text-decoration: none;
+    }
+
+    nav>ul {
+        /* Sets the display to table-row */
+        display: table-row;
+    }
+
+    nav>ul>li {
+        /* Sets the display to table-cell */
+        display: table-cell;
+        text-align: center;
+    }
+
+    nav>ul>li>a {
+        /* Sets the display to block. */
+        display: block;
+    }
+}
+
+/* 
+
+    Generic Media Styles
+
+*/
+@media only screen and (max-width: 490px) {
+    body {
+        width: 100%;
+    }
+}
+
+/* 
+    Forms St
+*/
