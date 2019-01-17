@@ -22,6 +22,19 @@ div#zipDiv {
 
 textarea {
     width: 400px;
+    height: 200px;
+}
+
+button {
+    height: 50px;
+    font-size: 0.8em;
+    background-color: rgb(90, 186, 250);
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(113, 193, 247);
+    cursor: pointer;
 }
 
 fieldset {
@@ -33,12 +46,20 @@ button {
     margin-left: 10px;
 }
 
+label {
+    font-size: 1em;
+}
+
 legend {
     font-size: 1.5em;
     background-color: rgb(0, 162, 255);
     width: 100%;
     border-radius: 10px;
     margin-left: -10px;
+    text-indent: 20px;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 input#streetId {
@@ -56,7 +77,33 @@ input#streetId {
     }
 
     textarea {
-        width: 300px;
+        height: 150px;
+    }
+
+    button {
+        width: 25%;
+    }
+
+    button:first-of-type {
+        margin-left: 6%;
+    }
+
+    button:last-of-type {
+        margin-right: 6%;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    button {
+        width: 20%;
+    }
+
+    button:first-of-type {
+        margin-left: 20%;
+    }
+
+    button:last-of-type {
+        margin-right: 10%;
     }
 }
 
@@ -77,4 +124,54 @@ input#zipId:invalid {
     background-image: url("mc_stop.png");
     background-position: right;
     background-repeat: no-repeat;
+}
+
+/* 
+    Input Styles
+*/
+input {
+    box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="tel"] {
+    border: none;
+    border-bottom: 2px solid rgb(67, 167, 250);
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus {
+    border: none;
+    border-bottom: 3px solid blue;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    border: none;
+}
+
+select {
+    border: 1px solid blue;
+}
+
+select:focus {
+    outline: none;
+    border: 2px solid rgb(67, 167, 250);
+}
+
+
+/* 
+    Text Area Styles
+*/
+
+textarea {
+    border: 2px solid rgb(67, 167, 250);
+    width: 100%;
+    font-size: 0.8em;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+    border: 2px solid blue;
 }
