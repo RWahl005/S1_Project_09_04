@@ -30,6 +30,8 @@ function setForm() {
     }
 }
 
+// The onCommand function (void)
 function onCommand() {
+    // Alerts that the contact me button has been pressed.
     alert("The contact me button has been pressed.");
 }

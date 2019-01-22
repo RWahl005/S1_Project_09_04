@@ -7,61 +7,93 @@
     Date: 1.16.19
     File Name: mc_styles.css
 
+    Basic Styles for the webpage. For the forms styles see mc_forms.css
+
 */
 
-/* Body Styles */
+/* 
+    Body Styles 
+*/
 html {
+    /* Set the background color to blue */
     background-color: rgb(79, 79, 248);
 }
 
 body {
+    /* Sets the background color to white. */
     background-color: white;
+    /* Sets the width of the body to 85% of the screen width */
     width: 85%;
+    /* Centers the body */
     margin: auto;
     padding: 0;
+    /* Adds in box shadowing around the body. */
     box-shadow: 0px 0px 20px black;
 
 }
 
-/* Footer Styles */
-footer {
+h1 {
     text-align: center;
+    font-size: 2em;
+}
+
+/* 
+    Footer Styles 
+*/
+footer {
+    /* Centers the footer text */
+    text-align: center;
+    /* Sets the background to darkgray */
     background-color: darkgray;
+    /* Sets the text color to white */
     color: white;
 }
 
+/* The first paragraph in the footer */
 footer>p:first-of-type {
+    /* Sets the bottom margin to 1 pixel */
     margin-bottom: 1px;
 }
 
+/* The last paragraph in the footer */
 footer>p:last-of-type {
+    /* Sets the top margin to 3 pixels and the bottom margin to 0. */
     margin-top: 3px;
     margin-bottom: 0;
 }
 
-/* Header Styles */
+/* 
+    Header Styles 
+*/
 header>img {
+    /* Sets the width of the image to 100% */
     width: 100%;
 }
 
-
-/* Media Styles for the navigation bar */
+/* 
+    Media Styles for the navigation bar 
+*/
 header>nav a {
+    /* Sets the background color to blue*/
     background-color: rgb(64, 144, 248);
+    /* Sets the text color to white */
     color: white;
+    /* Sets the box sizing to border box */
     box-sizing: border-box;
 }
 
+
+
 header>nav a:visited.active,
 header>nav a:link.active {
-    /* Sets the background color to gray and the text color to white */
+    /* Sets the background color to blue and the text color to white */
     background-color: rgb(59, 152, 228);
     color: white;
 }
 
 header>nav a:hover,
 header>nav a:link {
-    /* Sets the background color to gray and the text color to white */
+    /* Sets the background color to blue and the text color to white */
     background-color: rgb(30, 175, 233);
     color: white;
 }
@@ -152,10 +184,7 @@ header>nav a:link {
 */
 @media only screen and (max-width: 490px) {
     body {
+        /* Sets the width of the body to 100% */
         width: 100%;
     }
 }
-
-/* 
-    Forms St
-*/

@@ -11,35 +11,50 @@
  -->
 
 <head>
+    <!-- Sets the charset used to utf-8 -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Sets the title -->
     <title>Millennium Computers</title>
+    <!-- Sets the view port -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Adds in the required style sheets -->
     <link rel="stylesheet" href="mc_styles.css" />
     <link rel="stylesheet" href="mc_forms.css" />
+    <!-- Adds in the required script -->
     <script src="mc_script.js"></script>
 </head>
 
 <body>
     <header>
+        <!-- The logo of the webpage. -->
         <img src="mc_logo.png" alt="Millennium Computers" />
+        <!-- The navigation bar -->
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Information</a></li>
+                <!-- The active page -->
                 <li><a href="index.html" class="active">Purchase</a></li>
             </ul>
         </nav>
     </header>
     <section>
+        <h1>Order a Computer</h1>
         <!-- The form -->
+        <!-- Sets the action to mill_computers.com with a method of POST -->
         <form action="http://www.mill_computers.com/orders/process.cgi" method="POST">
+            <!-- The userinformation field set -->
             <fieldset id="userInformation">
+                <!-- The legend used to name the field set -->
                 <legend>User Information (Required)</legend>
 
+                <!-- A div with the class of form row -->
                 <div class="formRow">
+                    <!-- A label that belongs to an input witht he id of fname -->
                     <label for="fname">First Name</label>
+                    <!-- This input is rewuired and has a name of fName with an id of fname. -->
                     <input type="text" name="fName" id="fname" required />
                 </div>
 
@@ -53,12 +68,15 @@
                     <input type="text" name="street" id="streetId" required />
                 </div>
 
+                <!-- This formRow contains the city, zip, and state -->
                 <div class="formRow">
                     <label for="cityId">City</label>
                     <input type="text" name="city" id="cityId" required />
 
                     <label for="stateId">State</label>
+                    <!-- The state is a selection list with all of the 50 states. -->
                     <select name="state" id="stateId" required>
+                        <!-- An option with the value of AL and text of AL -->
                         <option value="AL">AL</option>
                         <option value="AK">AK</option>
                         <option value="AZ">AZ</option>
@@ -112,6 +130,7 @@
                     </select>
                     <div id="zipDiv">
                         <label for="zipId">ZIP</label>
+                        <!-- This input has a pattern for client side validation. A placeholder is displayed to show the user the format. -->
                         <input type="text" name="zip" id="zipId" pattern="^\d{5}(-\d{4})?$" placeholder="nnnnn (-nnnn)"
                             required />
                     </div>
@@ -119,15 +138,19 @@
 
                 <div class="formRow">
                     <label for="phoneId">Phone</label>
+                    <!-- Uses a type of telephone to pull up a specail keyboard for phone users. Contains a placeholder to show a valid format. Has a pattern to allow for client side validation. -->
                     <input type="tel" name="phone" id="phoneId" placeholder="(nnn) nnn-nnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$|^\d{3}[\s-]?\d{3}[\s-]?\d{4}$"
                         required>
                 </div>
             </fieldset>
+            <!-- The order field set -->
             <fieldset id="order">
+                <!-- The legend of the field set -->
                 <legend>Order</legend>
 
                 <div class="formRow">
                     <label for="pSpeedId">Processor Speed</label>
+                    <!-- A select list for the processor speed. -->
                     <select name="pSpeed" id="pSpeedId">
                         <option value="3.2">3.2 GHz</option>
                         <option value="4.0">4.0 GHz</option>
@@ -137,6 +160,7 @@
 
                 <div class="formRow">
                     <label for="memId">Memory</label>
+                    <!-- A select list for the memory -->
                     <select name="mem" id="memId">
                         <option value="1">1 GB</option>
                         <option value="2">2 GB</option>
@@ -147,6 +171,7 @@
 
                 <div class="formRow">
                     <label for="monitorId">Monitor Size</label>
+                    <!-- A select list for the monitor size -->
                     <select name="monitor" id="monitorId">
                         <option value="15">15"</option>
                         <option value="17">17"</option>
@@ -157,6 +182,7 @@
 
                 <div class="formRow">
                     <label for="hdId">Hard Drive Size</label>
+                    <!-- A select list for the hard drive size -->
                     <select name="hd" id="hdId">
                         <option value="240">240 GB</option>
                         <option value="500">500 GB</option>
@@ -166,6 +192,7 @@
                 </div>
 
                 <div class="formRow">
+                    <!-- A checkbox for the dvd burner option. (Has only options of true or false) -->
                     <input type="checkbox" name="dvd" id="dvdId">
                     <label for="dvdId">DVD Burner</label>
 
@@ -177,23 +204,28 @@
                 </div>
 
                 <div class="formRow">
+                    <!-- Sets the checkbox to checked by default. -->
                     <input type="checkbox" id="warrantyId" name="warranty" checked>
                     <label for="warrantyId">Would you like 24-month extended warranty?</label>
                 </div>
 
                 <div class="formRow">
-                    <label for="commentsId">Additonal Comments</label>
+                    <label for="commentsId">Additional Comments</label>
                 </div>
+                <!-- Adds in the text area. (It is resized in the css so the cols and rows means nothing.) -->
                 <textarea name="comments" id="commentsId" cols="30" rows="10"></textarea>
             </fieldset>
+            <!-- The buttons -->
             <button type="submit">Send Order</button>
             <button type="reset">Cancel Order</button>
+            <!-- The command button that just runs a simple function. -->
             <button type="button" onclick="onCommand()">Contact Me</button>
         </form>
     </section>
+    <!-- The footer of the page -->
     <footer>
         <p>Millennium Computers</p>
-        <p>12928 W. Williams St. <br> Peoria, Arizona, 85383</p>
+        <p>13958 N. 19th St. <br> Phoenix, Arizona, 85003</p>
     </footer>
 
 </body>

@@ -9,118 +9,161 @@
 
 */
 
-/* General Form Styles */
+/* 
+    General Form Styles
+ */
+
 div.formRow {
+    /* Sets the display to block */
     display: block;
+    /* Sets the padding to 10 pixels */
     padding: 10px;
+    /* Sets the left margin to 10 pixels */
     margin-left: 10px;
 }
 
 div#zipDiv {
+    /* Sets the display to inline for the zip input */
     display: inline;
 }
 
+/* The Additional Comments */
 textarea {
+    /* A size of 400 x 200 pixels */
     width: 400px;
     height: 200px;
 }
 
 button {
+    /* A height of 50 pixels */
     height: 50px;
+    /* Font size of 0.8 em */
     font-size: 0.8em;
+    /* A background color of blue */
     background-color: rgb(90, 186, 250);
+    /* A text color of white */
     color: white;
+    /* Sets the left margin to 10 pixels */
+    margin-left: 10px;
+    /* Removes the unwanted border in firefox. */
+    border: none;
 }
 
 button:hover {
+    /* A background color of blue */
     background-color: rgb(113, 193, 247);
+    /* Sets the cursor to a pointer */
     cursor: pointer;
 }
 
 fieldset {
+    /* Removes the border around fieldsets */
     border: none;
+    /* Sets the top margin to 20 pixels */
     margin-top: 20px;
 }
 
-button {
-    margin-left: 10px;
-}
-
 label {
+    /* Sets the font size to 1 em */
     font-size: 1em;
 }
 
 legend {
+    /* Sets the font size to 1.5 em */
     font-size: 1.5em;
+    /* Sets the background color to blue */
     background-color: rgb(0, 162, 255);
+    /* Sets the width to 100% of the form */
     width: 100%;
+    /* Sets the border radius to 10 pixels for all corners */
     border-radius: 10px;
+    /* Sets the left margin to -10 pixels. */
     margin-left: -10px;
+    /* Sets the text indent to 20 pixels */
     text-indent: 20px;
+    /* Sets the font color to white */
     color: white;
+    /* Sets the top and bottom padding to 5 pixels */
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
 input#streetId {
+    /* Sets the width of the street input to 350 pixels */
     width: 350px;
 }
 
+/* Media for when viewed on mobile devices */
 @media only screen and (max-width: 481px) {
     div#zipDiv {
+        /* Sets the zip to block and a margin top of 10 pixels */
         display: block;
         margin-top: 10px;
     }
 
     input#streetId {
+        /* Sets the width of the street input to 150 pixels. */
         width: 150px;
     }
 
     textarea {
+        /* Sets the height of the textarea to 150pixels */
         height: 150px;
     }
 
     button {
+        /* Sets the width of the buttons to 25% */
         width: 25%;
     }
 
     button:first-of-type {
+        /* The first button has a left margin of 6% */
         margin-left: 6%;
     }
 
     button:last-of-type {
+        /* The last button has a right margin of 6% */
         margin-right: 6%;
     }
 }
 
+/* When the screen is in desktop or tablet mode */
 @media only screen and (min-width: 481px) {
     button {
+        /* Sets the width of the buttons to 20% */
         width: 20%;
     }
 
     button:first-of-type {
+        /* The first button has a left margin of 20% */
         margin-left: 20%;
     }
 
     button:last-of-type {
+        /* The last button has a right margin of 20% */
         margin-right: 10%;
     }
 }
 
 /* Validation Styles */
+/* When valid inputs are in focus */
 input:valid:focus {
+    /* Display a green background with a checkmark in the right corner */
     background: rgb(168, 247, 168) url("mc_go.png") right no-repeat;
 }
 
 input:invalid:focus {
+    /* Display a red background with a red x in the right corner */
     background-color: rgb(253, 188, 188);
     background-image: url("mc_stop.png");
     background-position: right;
     background-repeat: no-repeat;
 }
 
+/* Sets these styles to show invalid even when not in focus to help the user. */
 input#phoneId:invalid,
 input#zipId:invalid {
+    /* Display a red x in the right corner */
     background-image: url("mc_stop.png");
     background-position: right;
     background-repeat: no-repeat;
@@ -130,48 +173,70 @@ input#zipId:invalid {
     Input Styles
 */
 input {
+    /* Sets the box sizing to border box */
     box-sizing: border-box;
 }
 
+/* All inputs with a type of text or telephone */
 input[type="text"],
 input[type="tel"] {
+    /* Remove the border and set the bottom border to 2 pixels solid blue */
     border: none;
     border-bottom: 2px solid rgb(67, 167, 250);
 }
 
+/* All inputs with a type of text or telephone that are in focus */
 input[type="text"]:focus,
 input[type="tel"]:focus {
+    /* Remove the border and set the bottom border to 3 pixels solid blue */
     border: none;
     border-bottom: 3px solid blue;
+    /* Remove the default outline around the input. */
     outline: none;
 }
 
+/* All inputs that are checkboxes */
 input[type="checkbox"] {
+    /* Remove any border */
     border: none;
 }
 
 select {
+    /* A 1 pixel solid blue border */
     border: 1px solid blue;
 }
 
+/* All selects that are in focus */
 select:focus {
+    /* Removes the default outline */
     outline: none;
+    /* Sets the border to 2 pixel solid blue border */
     border: 2px solid rgb(67, 167, 250);
 }
 
+button:focus {
+    /* Changes the default outline around the button */
+    outline: 3px solid blue;
+}
 
 /* 
     Text Area Styles
 */
 
 textarea {
+    /* Sets the border around the text area to 2 pixels solid blue */
     border: 2px solid rgb(67, 167, 250);
+    /* Sets the width to 100% */
     width: 100%;
+    /* Sets the font size to 0.8 em */
     font-size: 0.8em;
+    /* Prevents the user from resizing the textarea. */
     resize: none;
 }
 
 textarea:focus {
+    /* Remove the default outline */
     outline: none;
+    /* Add int a 2 pixel solid blue border. */
     border: 2px solid blue;
 }
